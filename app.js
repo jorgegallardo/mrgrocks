@@ -21,8 +21,11 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
     });
 }]);
 
-app.controller('NavController', ['$scope', function($scope) {
-	$scope.currentTab = 'home';
+app.controller('NavController', ['$scope', '$location', function($scope, $location) {
+	$scope.currentTab = $location.path().substring(1);
+  if ($location.path() == '/') {
+    $scope.currentTab = 'home';
+  }
 	$scope.changeTab = function(newTab) {
 		$scope.currentTab = newTab;
 	};
