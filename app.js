@@ -31,6 +31,12 @@ app.controller('NavController', ['$scope', '$location', function($scope, $locati
 	};
 }]);
 
+app.run('$rootScope', '$templateCache', [function($rootScope, $templateCache) {
+   $rootScope.$on('$viewContentLoaded', function() {
+      $templateCache.removeAll();
+   });
+}]);
+
 app.controller('HomeController', function() {
 
 });
