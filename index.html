@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html ng-app="mrgrocks">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-   <link rel="stylesheet" href="bootstrap/css/justified-nav.css">
-   <link rel="stylesheet" type="text/css" href="bootstrap/css/custom.css">
-   <link rel="icon" href="img/favicon.ico">
-   <title>Mr. G. Rocks!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/justified-nav.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom.css">
+	<link rel="icon" href="img/favicon.ico">
+	<title>Welcome!</title>
 </head>
 <body>
 	<div class="container">
-   	<div class="masthead" ng-controller="NavController">
-         <ul class="nav nav-justified">
-            <li ng-class="{'active': currentTab === 'home'}"><a href="#/" ng-click="changeTab('home')">Home</a></li>
-            <li ng-class="{'active': currentTab === 'livingenvironment'}"><a href="#/livingenvironment" ng-click="changeTab('livingenvironment')">Living Environment</a></li>
-            <li ng-class="{'active': currentTab === 'earthscience'}"><a href="#/earthscience" ng-click="changeTab('earthscience')">Earth Science</a></li>
-         </ul>
-      </div>
-    
-      <div ng-view></div>
+		<div class="masthead" ng-controller="NavController">
+			<ul class="nav nav-justified">
+				<li ng-class="{'active': currentTab === 'home'}"><a href="#/" ng-click="changeTab('home')">Home</a></li>
+				<li ng-class="{'active': currentTab === 'livingenvironment'}"><a href="#/livingenvironment" ng-click="changeTab('livingenvironment')">Living Environment</a></li>
+				<li ng-class="{'active': currentTab === 'earthscience'}"><a href="#/earthscience" ng-click="changeTab('earthscience')">Earth Science</a></li>
+			</ul>
+		</div>
+		
+		<div ng-view></div>
 
-      <div class="footer"><p>&copy;2014 a -=[mrG]=- production</p></div>
-   </div> <!-- container -->
+		<div class="footer"><p>&copy;2014 a -=[mrG]=- production</p></div>
+	 </div> <!-- container -->
 
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/custom.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
-  <script src="https://code.angularjs.org/1.2.24/angular-route.js"></script>
-  <script src="app.js"></script>
-
+	<script src="https://code.angularjs.org/1.2.25/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>

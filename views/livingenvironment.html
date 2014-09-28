@@ -1,59 +1,26 @@
 <div class="row">
-   <div class="col-lg-12">
-      <h1 class="page-header">Living Environment Blog</h1>
-   </div>
+	<div class="col-lg-12">
+		<h1 class="page-header text-center" style="color: #5cb85c">Living Environment Blog</h1>
+	</div>
 </div> <!-- row -->
 
-<div class="row">
-   <div class="col-sm-6">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 18, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/gituyixxegskgxn/hw11.pdf?dl=0" class="btn btn-success" role="button">hw11</a>
-         </div>
-         <div class="panel-body">
-            <p>Remember, try doing the homework first on your own, leaving blank any questions that you get stuck on. You should only watch the video after you've made an honest attempt at completing the work. Send Mr. G. a message if you're still having trouble!</p>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6">
-      <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zkl10aE93pg?rel=0" allowfullscreen></iframe>
-      </div>
-   </div>
-</div> <!-- row -->
+<section ng-repeat="post in LEposts | orderBy:'-date'" ng-controller="LEController">
+	<div class="row">
+		<article ng-class="{'col-sm-12': !post.video, 'col-sm-7': post.video}">
+			<div class="pull-right">
+				<a ng-repeat="file in post.files" ng-href="{{file.url}}" class="btn btn-success" role="button">{{file.name}}</a> 
+			</div>	
+			<div class="well">
+				<h4><small>{{post.date}}</small><br>
+				<strong>{{post.title}}</strong></h4>
+				<p>{{post.body}}</p>
+			</div>
+		</article>
+		<aside class="col-sm-5" ng-if="post.video">
+			<div class="embed-responsive embed-responsive-16by9">
+				 <iframe class="embed-responsive-item" ng-src="{{post.video}}" allowfullscreen></iframe>
+			</div>
+		</aside>
+	</div> <!-- row -->
 <hr>
-<div class="row">
-   <div class="col-sm-6">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 16, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/n456on2qaekj1cu/hw9%20-%20Scientific%20Method%20Practice.pdf?dl=0" class="btn btn-success" role="button">hw9</a>
-         </div>
-         <div class="panel-body">
-            <p>We will be taking a quiz on this homework tomorrow as soon as you walk in! Be sure to send Mr. G. a message on Engrade after you create your account!</p>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6">
-      <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/K7Ys26q3KvM?rel=0" allowfullscreen></iframe>
-      </div>
-   </div>
-</div> <!-- row -->
-<hr>
-<div class="row">
-   <div class="col-sm-12">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 15, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/uttjj0nttkbfxq6/hw5%20-%20Hypotheses.pdf?dl=0" class="btn btn-success" role="button">hw5</a> <a href="https://www.dropbox.com/s/xy1zrpqg09mda7x/hw7%20-%20Hypothesis%2C%20Control%2C%20Experimental%20Groups.pdf?dl=0" class="btn btn-success" role="button">hw7</a>
-         </div>
-         <div class="panel-body">
-            <p>Try clicking on the buttons above (labeled hw5 and hw7) to access the homework assignments. If you have any further questions or comments send me a message on Engrade.</p>
-         </div>
-      </div>
-   </div>
-</div> <!-- row -->
-
-
+</section>

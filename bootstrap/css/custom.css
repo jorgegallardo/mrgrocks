@@ -1,13 +1,47 @@
-h3{
-	margin-top: 0px;
-	margin-bottom: 5px;
+html {
+    min-height: 100%;
+}
+
+body {
+	background-color: #D3D3D3;
+}
+
+.page-header {
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 45px;
+	font-weight: 600;
+	padding-bottom: 0px;
+	margin: 20px 0 20px;
+	border-bottom: 0px;
 }
 
 h4 {
-	margin-top: 5px;
-	margin-bottom: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h4 small {
+	font-style: italic;
+	color: black;
 }
 
 #engrade {
 	margin-top: 20px;
+}
+
+.footer {
+	padding-top: 0px;
+	padding-bottom: 30px;
+	margin-top: 20px;
+	border-top: 0px;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.well {
+	min-height: 20px;
+	padding: 10px 19px 15px 19px;
+	border-radius: 15px
 }

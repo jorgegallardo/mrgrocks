@@ -1,63 +1,26 @@
 <div class="row">
-   <div class="col-lg-12">
-      <h1 class="page-header">Earth Science Blog</h1>
-   </div>
+	<div class="col-lg-12">
+		<h1 class="page-header text-center" style="color: #f0ad4e">Earth Science Blog</h1>
+	</div>
 </div> <!-- row -->
 
-<div class="row">
-   <div class="col-sm-6">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 23, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/rhhu88o6yosu0xd/hw14%20-%20Exam%201%20Practice%20Questions.pdf?dl=0" class="btn btn-warning" role="button">hw14</a>
-            <a href="https://www.dropbox.com/s/60jqj8d0k3irbbb/hw14%20-%20Answer%20Key.pdf?dl=0" class="btn btn-warning" role="button">hw14 Answer Key</a>
-         </div>
-         <div class="panel-body">
-            <p>This is the final review sheet for tomorrow's exam on science skills. If you want to check your answers, open the Answer Key by clicking the button above. I was a bit tired when I recorded the video but hopefully it'll help. I went over questions 4, 10, 11, 20, 23, and 24 (not in that order). Good luck tomorrow!</p>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6">
-      <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/xrvPeWtJsA4?rel=0" allowfullscreen></iframe>
-      </div>
-   </div>
-</div>
-<hr><!--- row -->
-<div class="row">
-   <div class="col-sm-6">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 22, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/2pzz0fvuglgckr4/hw13%20-%20Rate%20of%20Change.pdf?dl=0" class="btn btn-warning" role="button">hw13</a>
-         </div>
-         <div class="panel-body">
-            <p>I forgot to explicitly write out the "gradient formula" in our class notes but I went over it first thing in the video! I reviewed questions 3, 4, 5, 6, and 7. Don't forget to look at the review packet for your exam (check your Engrades). I will release the video for it tomorrow by only doing the questions that are requested.</p>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6">
-      <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ofdHPP95PCU?rel=0" allowfullscreen></iframe>
-      </div>
-   </div>
-</div> <!-- row -->
+<section ng-repeat="post in ESposts | orderBy:'-date'" ng-controller="LEController">
+	<div class="row">
+		<article ng-class="{'col-sm-12': !post.video, 'col-sm-7': post.video}">
+			<div class="pull-right">
+				<a ng-repeat="file in post.files" ng-href="{{file.url}}" class="btn btn-warning" role="button">{{file.name}}</a> 
+			</div>	
+			<div class="well">
+				<h4><small>{{post.date}}</small><br>
+				<strong>{{post.title}}</strong></h4>
+				<p>{{post.body}}</p>
+			</div>
+		</article>
+		<aside class="col-sm-5" ng-if="post.video">
+			<div class="embed-responsive embed-responsive-16by9">
+				 <iframe class="embed-responsive-item" ng-src="{{post.video}}" allowfullscreen></iframe>
+			</div>
+		</aside>
+	</div> <!-- row -->
 <hr>
-<div class="row">
-   <div class="col-sm-6">
-      <div class="panel panel-default">
-         <div class="panel-heading">
-            <h3><strong>September 15, 2014</strong></h3>
-            <a href="https://www.dropbox.com/s/ljnc05fomvgajju/hw8.pdf?dl=0" class="btn btn-warning" role="button">hw8</a>
-         </div>
-         <div class="panel-body">
-            <p>This is our first "official" homework assignment of the new school year! We're taking a quiz tomorrow so make sure that you review mass, volume, and density.</p>
-         </div>
-      </div>
-   </div>
-   <div class="col-sm-6">
-      <div class="embed-responsive embed-responsive-16by9">
-         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/Q2ZdN-iJ71g?rel=0" allowfullscreen></iframe>
-      </div>
-   </div>
-</div> <!-- row -->
+</section>
