@@ -43,5 +43,8 @@ h4 small {
 .well {
 	min-height: 20px;
 	padding: 10px 19px 15px 19px;
-	border-radius: 15px
+	border-top-left-radius: 15px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
 }

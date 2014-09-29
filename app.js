@@ -47,6 +47,18 @@ app.factory('LEposts', function() {
 	return {
 		posts: [
 			{
+				"date": "9.29.14",
+				"title": "Characteristics of Living Things",
+				"files": [
+					{
+						"name": "hw16",
+						"url": "https://www.dropbox.com/s/zhtb2bqg0j19wr3/hw16%20-%20Characteristics%20of%20Living%20Things.pdf?dl=0"
+					}
+				],
+				"body": "In today's lesson, we went over the characteristics that all living organisms share with each other. Be sure to answer the questions in hw16 in your notebook while you are reading pages 16-22 in your textbook!",
+				"video": "https://www.youtube.com/embed/S86ISLWn7dc"
+			},
+			{
 				"date": "9.18.14",
 				"title": "Experimental Design",
 				"files": [
