@@ -47,7 +47,25 @@ app.factory('LEposts', function() {
 	return {
 		posts: [
 			{
-				"date": "9.29.14",
+				"date": "10.1.14",
+				"title": "Exam 1 Corrections",
+				"body": "I have included a video for questions 2, 4, 5, 6, 9, 10, 11, 13, 19, 20! Let me know if you still need help by messaging me on Engrade.",
+				"video": "https://www.youtube.com/embed/nkwwY68QOH8"
+			},
+			{
+				"date": "10.1.14",
+				"title": "Intro to Cells",
+				"files": [
+					{
+						"name": "hw18",
+						"url": "https://www.dropbox.com/s/0xhap57eycv4nj4/hw18%20-%20Intro%20to%20Cells.pdf?dl=0"
+					}
+				],
+				"body": "Open your notebooks and make sure to review your notes. We learned about the many levels of life (cells, tissues, organs, organ systems, organisms, population, community, ecosystem, biosphere) in class today. Don't forget that your test corrections (hw17) is due tomorrow. Be sure that the Scantron and the corrections are both signed by a parent/guardian as well.",
+				"video": ""
+			},
+			{
+				"date": "09.29.14",
 				"title": "Characteristics of Living Things",
 				"files": [
 					{
@@ -59,7 +77,7 @@ app.factory('LEposts', function() {
 				"video": "https://www.youtube.com/embed/S86ISLWn7dc"
 			},
 			{
-				"date": "9.18.14",
+				"date": "09.18.14",
 				"title": "Experimental Design",
 				"files": [
 					{
@@ -71,7 +89,7 @@ app.factory('LEposts', function() {
 				"video": "https://www.youtube.com/embed/zkl10aE93pg"
 			},
 			{
-				"date": "9.16.14",
+				"date": "09.16.14",
 				"title": "Independent & Dependent Variables",
 				"files": [
 					{
@@ -83,7 +101,7 @@ app.factory('LEposts', function() {
 				"video": "https://www.youtube.com/embed/K7Ys26q3KvM"
 			},
 			{
-				"date": "9.15.14",
+				"date": "09.15.14",
 				"title": "Hypotheses, Control & Experimental Groups",
 				"files": [
 					{
@@ -103,9 +121,33 @@ app.factory('LEposts', function() {
 
 app.factory('ESposts', function() {
 	return {
-		posts: [
+		posts: [	
 			{
-				"date": "9.23.14",
+				"date": "10.1.14",
+				"title": "hw18",
+				"files": [
+					{
+						"name": "hw18",
+						"url": "https://www.dropbox.com/s/srwr7c69jwou9pl/hw18%20-%20Polaris.pdf?dl=0"
+					}
+				],
+				"body": "DO THIS HOMEWORK IN YOUR NOTEBOOK MY FELLOW EARTH SCIENCE STUDENTS!",
+				"video": ""
+			},
+			{
+				"date": "09.30.14",
+				"title": "hw17",
+				"files": [
+					{
+						"name": "hw17",
+						"url": "https://www.dropbox.com/s/2fv1uhiheyhohjh/hw17.pdf?dl=0"
+					}
+				],
+				"body": "Tonight you will be reading from your Earth Science textbook and answering some questions from the hw17 file. As always, send Mr. G. a message on Engrade if you don't understand something! Test corrections are due on Thursday and must be signed by a parent/guardian. The scantron must also be signed.",
+				"video": ""
+			},
+			{
+				"date": "09.23.14",
 				"title": "Exam Review",
 				"files": [
 					{
@@ -121,7 +163,7 @@ app.factory('ESposts', function() {
 				"video": "https://www.youtube.com/embed/xrvPeWtJsA4"
 			},
 			{
-				"date": "9.22.14",
+				"date": "09.22.14",
 				"title": "Rate of Change",
 				"files": [
 					{
@@ -133,7 +175,7 @@ app.factory('ESposts', function() {
 				"video": "https://www.youtube.com/embed/ofdHPP95PCU"
 			},
 			{
-				"date": "9.15.14",
+				"date": "09.15.14",
 				"title": "Mass, Weight, Density, Volume",
 				"files": [
 					{
