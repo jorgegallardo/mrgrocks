@@ -1,51 +1,71 @@
 var app = angular.module('mrgrocks', ['ngRoute']);
 
 app.config(['$sceProvider', function($sceProvider) {
-  $sceProvider.enabled(false);
+	$sceProvider.enabled(false);
 }]);
 
 app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.html5Mode(false);
+	$locationProvider.html5Mode(false);
 
-  $routeProvider
-    .when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'NavController'
-    })
-    .when('/livingenvironment', {
-      templateUrl: 'views/livingenvironment.html',
-      controller: 'LEController'
-    })
-    .when('/earthscience', {
-      templateUrl: 'views/earthscience.html',
-      controller: 'ESController'
-    })
-    .otherwise({
-      redirectTo: '/'
-    });
+	$routeProvider
+		.when('/', {
+			templateUrl: 'views/home.html',
+			controller: 'NavController'
+		})
+		.when('/livingenvironment', {
+			templateUrl: 'views/livingenvironment.html',
+			controller: 'LEController'
+		})
+		.when('/earthscience', {
+			templateUrl: 'views/earthscience.html',
+			controller: 'ESController'
+		})
+		.when('/new', {
+			templateUrl: 'views/new.html',
+			controller: 'PostController'
+		})
+		.otherwise({
+			redirectTo: '/'
+		});
 }]);
 
 app.controller('NavController', ['$scope', '$location', function($scope, $location) {
 	$scope.currentTab = $location.path().substring(1);
-  if ($location.path() == '/') {
-    $scope.currentTab = 'home';
-  }
+	if($location.path() == '/') {
+		$scope.currentTab = 'home';
+	}
 	$scope.changeTab = function(newTab) {
 		$scope.currentTab = newTab;
 	};
 }]);
 
 app.controller('LEController', ['$scope', 'LEposts', function($scope, LEposts) {
-  $scope.LEposts = LEposts.posts;
+	$scope.LEposts = LEposts.posts;
 }]);
 
 app.controller('ESController', ['$scope', 'ESposts', function($scope, ESposts) {
-  $scope.ESposts = ESposts.posts;
+	$scope.ESposts = ESposts.posts;
 }]);
 
 app.factory('LEposts', function() {
 	return {
 		posts: [
+			{
+				"date": "10.2.14",
+				"title": "Organelles",
+				"files": [
+					{
+						"name": "hw18",
+						"url": "https://www.dropbox.com/s/0xhap57eycv4nj4/hw18%20-%20Intro%20to%20Cells.pdf?dl=0"
+					},
+					{
+						"name": "hw19",
+						"url": "https://www.dropbox.com/s/swcp1kvjgrj1mmx/hw19%20-%20Organelles.pdf?dl=0"
+					}
+				],
+				"body": "Here is your homework for the weekend! I have included homework 18 (for those of you that didn't see it yesterday) and homework 19, due Monday. If you did not submit your signed scantrons and exam corrections, make sure to bring those in on Monday as well.",
+				"video": ""
+			},
 			{
 				"date": "10.1.14",
 				"title": "Exam 1 Corrections",
