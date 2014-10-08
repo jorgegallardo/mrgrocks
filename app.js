@@ -1,55 +1,63 @@
 var app = angular.module('mrgrocks', ['ngRoute']);
 
 app.config(['$sceProvider', function($sceProvider) {
-	$sceProvider.enabled(false);
+  $sceProvider.enabled(false);
 }]);
 
 app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-	$locationProvider.html5Mode(false);
+  $locationProvider.html5Mode(false);
 
-	$routeProvider
-		.when('/', {
-			templateUrl: 'views/home.html',
-			controller: 'NavController'
-		})
-		.when('/livingenvironment', {
-			templateUrl: 'views/livingenvironment.html',
-			controller: 'LEController'
-		})
-		.when('/earthscience', {
-			templateUrl: 'views/earthscience.html',
-			controller: 'ESController'
-		})
-		.when('/new', {
-			templateUrl: 'views/new.html',
-			controller: 'PostController'
-		})
-		.otherwise({
-			redirectTo: '/'
-		});
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/home.html',
+      controller: 'NavController'
+    })
+    .when('/livingenvironment', {
+      templateUrl: 'views/livingenvironment.html',
+      controller: 'LEController'
+    })
+    .when('/earthscience', {
+      templateUrl: 'views/earthscience.html',
+      controller: 'ESController'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
 }]);
 
 app.controller('NavController', ['$scope', '$location', function($scope, $location) {
 	$scope.currentTab = $location.path().substring(1);
-	if($location.path() == '/') {
-		$scope.currentTab = 'home';
-	}
+  if ($location.path() == '/') {
+    $scope.currentTab = 'home';
+  }
 	$scope.changeTab = function(newTab) {
 		$scope.currentTab = newTab;
 	};
 }]);
 
 app.controller('LEController', ['$scope', 'LEposts', function($scope, LEposts) {
-	$scope.LEposts = LEposts.posts;
+  $scope.LEposts = LEposts.posts;
 }]);
 
 app.controller('ESController', ['$scope', 'ESposts', function($scope, ESposts) {
-	$scope.ESposts = ESposts.posts;
+  $scope.ESposts = ESposts.posts;
 }]);
 
 app.factory('LEposts', function() {
 	return {
 		posts: [
+			{
+				"date": "10.6.14",
+				"title": "Organelles",
+				"files": [
+					{
+						"name": "hw21",
+						"url": "https://www.dropbox.com/s/rb5o0y4zo2wnu28/hw21%20-%20Organelles.pdf?dl=0"
+					},
+				],
+				"body": "Tonight's homework is review for your upcoming quiz on cell organelles!",
+				"video": ""
+			},
 			{
 				"date": "10.2.14",
 				"title": "Organelles",
