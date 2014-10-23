@@ -8,27 +8,31 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
   $locationProvider.html5Mode(false);
 
   $routeProvider
-    .when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'NavController'
-    })
-    .when('/livingenvironment', {
-      templateUrl: 'views/livingenvironment.html',
-      controller: 'LEController'
-    })
-    .when('/earthscience', {
-      templateUrl: 'views/earthscience.html',
-      controller: 'ESController'
-    })
-    .otherwise({
-      redirectTo: '/'
-    });
+	 .when('/', {
+		templateUrl: 'views/home.html',
+		controller: 'NavController'
+	 })
+	 .when('/livingenvironment', {
+		templateUrl: 'views/livingenvironment.html',
+		controller: 'LEController'
+	 })
+	 .when('/earthscience', {
+		templateUrl: 'views/earthscience.html',
+		controller: 'ESController'
+	 })
+	 .when('/new', {
+		templateUrl: 'views/new.html',
+		controller: ''
+	 })
+	 .otherwise({
+		redirectTo: '/'
+	 });
 }]);
 
 app.controller('NavController', ['$scope', '$location', function($scope, $location) {
 	$scope.currentTab = $location.path().substring(1);
   if ($location.path() == '/') {
-    $scope.currentTab = 'home';
+	 $scope.currentTab = 'home';
   }
 	$scope.changeTab = function(newTab) {
 		$scope.currentTab = newTab;
@@ -47,7 +51,67 @@ app.factory('LEposts', function() {
 	return {
 		posts: [
 			{
-				"date": "10.6.14",
+				"date": "10.23.14",
+				"title": "hw33",
+				"files": [
+					{
+						"name": "hw33",
+						"url": "https://www.dropbox.com/s/l9zvf8laloiscqv/hw33.pdf?dl=0"
+					},
+				],
+				"body": "Complete your hypertonic/hypotonic drawings and hw33. Mr. G. and Mr. O'Neal will be creating a video for hw33 that will be up by 7:30pm. Send any questions on Engrade and we'll go over those questions in the video.",
+				"video": ""
+			},	
+			{
+				"date": "10.22.14",
+				"title": "hw32",
+				"files": [
+					{
+						"name": "hw32",
+						"url": "https://www.dropbox.com/s/qmxizrdf8go9pip/hw32%20-%20Hypertonic%20Hypotonic.pdf?dl=0"
+					},
+				],
+				"body": "Today we went over hypertonic and hypotonic solutions. Don't forget to complete your diagrams if you haven't done so already.",
+				"video": "https://www.youtube.com/embed/RjZh6AlKz9g"
+			},		
+			{
+				"date": "10.21.14",
+				"title": "hw31",
+				"files": [
+					{
+						"name": "hw31",
+						"url": "https://www.dropbox.com/s/mq5vsalzauogd9d/hw31%20-%20Osmosis.pdf?dl=0"
+					},
+				],
+				"body": "Review your notes on osmosis and hw30. Make sure that you have both in your notebook tomorrow...",
+				"video": ""
+			},
+			{
+				"date": "10.20.14",
+				"title": "hw30",
+				"files": [
+					{
+						"name": "hw30",
+						"url": "https://www.dropbox.com/s/uk2fdhsm0j5ibbs/hw30.pdf?dl=0"
+					},
+				],
+				"body": "Send messages on Engrade if you do not understand the questions!",
+				"video": ""
+			},
+			{
+				"date": "10.14.14",
+				"title": "Letter to Mr. G's cousin",
+				"files": [
+					{
+						"name": "hw26",
+						"url": "https://www.dropbox.com/s/xfis786zs5pznfv/hw26.pdf?dl=0"
+					},
+				],
+				"body": "This letter is due on Thursday because we have field day tomorrow. Make sure to describe every organelle in a simple form that a 5 year old will understand. Double check your Engrade account to make sure that all of your grades are accurate!",
+				"video": ""
+			},
+			{
+				"date": "10.06.14",
 				"title": "Organelles",
 				"files": [
 					{
@@ -59,7 +123,7 @@ app.factory('LEposts', function() {
 				"video": ""
 			},
 			{
-				"date": "10.2.14",
+				"date": "10.02.14",
 				"title": "Organelles",
 				"files": [
 					{
@@ -75,13 +139,13 @@ app.factory('LEposts', function() {
 				"video": ""
 			},
 			{
-				"date": "10.1.14",
+				"date": "10.01.14",
 				"title": "Exam 1 Corrections",
 				"body": "I have included a video for questions 2, 4, 5, 6, 9, 10, 11, 13, 19, 20! Let me know if you still need help by messaging me on Engrade.",
 				"video": "https://www.youtube.com/embed/nkwwY68QOH8"
 			},
 			{
-				"date": "10.1.14",
+				"date": "10.01.14",
 				"title": "Intro to Cells",
 				"files": [
 					{
@@ -149,9 +213,21 @@ app.factory('LEposts', function() {
 
 app.factory('ESposts', function() {
 	return {
-		posts: [	
+		posts: [
 			{
-				"date": "10.1.14",
+				"date": "10.20.14",
+				"title": "Exam 2 Review Sheet",
+				"files": [
+					{
+						"name": "Exam 2 Review Packet",
+						"url": "https://www.dropbox.com/s/uo1xjo0u5x5xz9c/hw30%20-%20Exam%202%20Review.pdf?dl=0"
+					}
+				],
+				"body": "This packet is your study sheet for Exam 2. You will be recieving a copy of it in class on Tuesday, but if you'd like to start going over the material, you may download it and begin working on the questions. If you get stuck on any topic, send Mr. G. a message and he will include it in the video to be posted here Tuesday evening.",
+				"video": ""
+			},	
+			{
+				"date": "10.01.14",
 				"title": "hw18",
 				"files": [
 					{
