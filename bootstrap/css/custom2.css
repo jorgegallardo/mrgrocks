@@ -1,0 +1,140 @@
+/*
+ * Scaffolding and type
+ */
+html {
+  font-size: 14px;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container-fluid {
+  padding: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  margin: 0;
+  font: 200 1rem/1.5 "Helvetica Neue", "Open Sans", sans-serif;
+  color: #5a5a5a; /*dark gray*/
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.5rem 0rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #2a2a2a;
+  letter-spacing: -.05em;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem }
+
+p {
+  margin: 0 0 1rem;
+}
+.lead {
+  font-size: 1.3rem;
+}
+
+/*blockquote {
+  position: relative;
+  margin: 0 1rem 1rem;
+  font-style: italic;
+  color: #7a7a7a;
+}
+blockquote p {
+  margin-bottom: 0;
+}*/
+
+ul li {
+  margin-bottom: .25rem;
+}
+
+/* Tighten up margin on last items */
+p:last-child,
+ul:last-child,
+blockquote:last-child{
+  margin-bottom: 0;
+}
+
+/*
+ * The Grid
+ */
+/*smallest page width, 1 col*/
+.col {
+  padding: 2rem 1rem;
+}
+/*.col p {
+  max-width: 40rem;
+}*/
+.col + .col {
+  border-top: 1px solid #dfe1e8;
+  background-color: #f7f7f9;
+}
+/*@media (min-width: 38em) { intermediate page width, 1 col
+  .col {
+    padding: 1.5rem;
+  }
+}*/
+
+@media (min-width: 48em) { /*large page width, 2 col*/
+  .section {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .col {
+    display: table-cell;
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+  }
+  .col + .col {
+    border-top: 0;
+  }
+}
+
+/*
+ * Sections
+ */
+
+.heading { /*at small width*/
+  padding: 1.5rem 1rem 1.5rem; /*top, left/right, bottom*/
+  background-color: #dfe1e8;
+  text-align: center;
+}
+
+/*@media (min-width: 38em) {
+  .heading {
+    padding: 1rem 1rem 1rem;
+  }
+}*/
+
+.section {
+  border-bottom: 1px solid #dfe1e8;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+  padding: 3rem 1rem;
+  font-size: 90%;
+  text-align: center;
+}
+.footer p {
+  margin-bottom: .5rem;
+}

@@ -51,6 +51,18 @@ app.factory('LEposts', function() {
 	return {
 		posts: [
 			{
+				"date": "10.27.14",
+				"title": "hw34",
+				"files": [
+					{
+						"name": "hw34",
+						"url": "https://www.dropbox.com/s/3rn2v9m0e3r83e1/hw34.pdf?dl=0"
+					},
+				],
+				"body": "Today we went over active transport, which requires energy and is the movement of solutes from a low concentration to a high concentration. Bring in your homework tomorrow!",
+				"video": ""
+			},
+			{
 				"date": "10.23.14",
 				"title": "hw33",
 				"files": [
@@ -60,7 +72,7 @@ app.factory('LEposts', function() {
 					},
 				],
 				"body": "Complete your hypertonic/hypotonic drawings and hw33. Mr. G. and Mr. O'Neal will be creating a video for hw33 that will be up by 7:30pm. Send any questions on Engrade and we'll go over those questions in the video.",
-				"video": ""
+				"video": "https://www.youtube.com/embed/vCcy-PrLSFk"
 			},	
 			{
 				"date": "10.22.14",
